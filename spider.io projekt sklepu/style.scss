@@ -14,7 +14,95 @@ $font: #1c1c1c;
 }
 body{
     font-family: 'Chivo Mono', monospace;
+    
 }
+.account-main{
+    position: absolute;
+    width:100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.account_box{
+    position: relative;
+    background-color: $background2;
+    border-radius: 10px;
+    opacity: 96%;
+    display: flex;
+    justify-content: center;
+    width:60%;
+
+    .login_form{
+        width: max-content;
+        height: 400px;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+        h1{
+            color:white;
+            margin-bottom: 50px;
+            font-size: 50px;
+        }
+        .remind_password{
+            position: absolute;
+            right:60px;
+            top: 62%;
+
+            a{
+                color:white;
+                text-decoration: none;
+                font-size: 15px;
+                justify-content: right;
+                display: flex;
+                float:right;
+                transition: 0.5s;
+            }
+            a:hover{
+                color:$accent;
+            }
+        }
+
+        input{
+            margin: 10px;
+            height: 30px;
+            width: 350px;
+            text-indent: 10px;
+            border-radius: 10px;
+            outline: none;
+            border: 2px solid $background2;
+        }
+        input[type="submit"]{
+            width: 150px;
+            margin-top: 50px;
+        }
+        input:focus{
+            border: 2px solid $background;
+        }
+        .register{
+            color:white;
+        }
+        .register_link{
+            color:white;
+            transition: 0.5s;
+        }
+        .register_link:hover{
+            color:$accent;
+        }
+    }
+}
+.account-main-toggle{
+    display: flex;
+}
+.body_blur{
+    filter: blur(2px);
+}
+
 
 @media screen and (min-width:1024px) {
     header{
@@ -29,6 +117,7 @@ body{
             display: flex;
             justify-content: right;
             align-items: center;
+            // position: relative;
     
             a{
                 color:white;
@@ -40,6 +129,33 @@ body{
                     position: relative;
                     top: 3px;
                 }
+            }
+
+
+            .lang_box{
+                background-color: $background2;
+                position: absolute;
+                width: 90px;
+                top: 22px;
+                right:23px;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                transition: 0.5s;
+                transform: scale(0) translateY(20px);
+                transform-origin: top;
+                z-index: 0;
+                a{
+                    display: flex;
+                    font-size: 13px;
+                    img{
+                        width:18px;
+                    }
+                }
+            }
+            .lang_box-toggle{
+                transform: scale(1) translateY(-5px);
+                transform-style: flat;
             }
         }
         .header-main{
@@ -148,6 +264,10 @@ body{
     main{
         width: 100%;
         height: 80vh;
+        position: relative;
+
+
+
     }
     footer{
         background-color: blue;
@@ -181,7 +301,34 @@ body{
                     top: 3px;
                 }
             }
+            
+            .lang_box{
+                background-color: $background2;
+                position: absolute;
+                width: 90px;
+                top: 22px;
+                right:23px;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                transition: 0.5s;
+                transform: scale(0) translateY(20px);
+                transform-origin: top;
+                z-index: 0;
+                a{
+                    display: flex;
+                    font-size: 13px;
+                    img{
+                        width:18px;
+                    }
+                }
+            }
+            .lang_box-toggle{
+                transform: scale(1) translateY(-5px);
+                transform-style: flat;
+            }
         }
+        
         .header-main{
             padding: 0 15px;
             // background-color: red;
@@ -289,6 +436,76 @@ body{
 }
 
 @media screen and (max-width: 767px){
+
+    .account_box{
+        position: relative;
+        background-color: $background2;
+        border-radius: 10px;
+        opacity: 100%;
+        display: flex;
+        justify-content: center;
+        width:90%;
+    
+        .login_form{
+            width: max-content;
+            height: 400px;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+    
+            h1{
+                color:white;
+                margin-bottom: 50px;
+                font-size: 13vw;
+            }
+            .remind_password{
+                position: unset;
+
+    
+                a{
+                    color:white;
+                    text-decoration: none;
+                    font-size: 15px;
+                    justify-content: right;
+                    display: flex;
+                    float:right;
+                }
+            }                
+    
+            input{
+                margin: 10px;
+                height: 30px;
+                width: 80%;
+                text-indent: 10px;
+                border-radius: 10px;
+                outline: none;
+                border: 2px solid $background2;
+            }
+            input[type="submit"]{
+                width: 150px;
+                margin-top: 50px;
+            }
+            input:focus{
+                border: 2px solid $background;
+            }
+            .register{
+                color:white;
+                display: flex;
+                flex-direction: column;
+            }
+            .register_link{
+                color:white;
+                transition: 0.5s;
+            }
+            .register_link:hover{
+                color:$accent;
+            }
+        }
+    }
+
     header{
         background-color: $background;
         width: 100%;
@@ -300,7 +517,7 @@ body{
             background-color: $background2;
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content:center;
             align-items: center;
     
             a{
@@ -312,6 +529,31 @@ body{
                 ion-icon{
                     position: absolute;
                 }
+            }
+            .lang_box{
+                background-color: $background2;
+                position: absolute;
+                width: 100%;
+                top: 40px;
+                right:unset;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                transition: 0.5s;
+                transform: scaleY(0) translateY(10px);
+                transform-origin: top;
+                z-index: 0;
+                a{
+                    display: flex;
+                    font-size: 13px;
+                    img{
+                        width:18px;
+                    }
+                }
+            }
+            .lang_box-toggle{
+                transform: scaleY(1) translateY(-10px);
+                transform-style: flat;
             }
         }
         .header-main{

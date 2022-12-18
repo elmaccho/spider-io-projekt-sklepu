@@ -7,6 +7,92 @@ body {
   font-family: "Chivo Mono", monospace;
 }
 
+.account-main {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.account_box {
+  position: relative;
+  background-color: #383838;
+  border-radius: 10px;
+  opacity: 96%;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
+.account_box .login_form {
+  width: max-content;
+  height: 400px;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.account_box .login_form h1 {
+  color: white;
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+.account_box .login_form .remind_password {
+  position: absolute;
+  right: 60px;
+  top: 62%;
+}
+.account_box .login_form .remind_password a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  justify-content: right;
+  display: flex;
+  float: right;
+  transition: 0.5s;
+}
+.account_box .login_form .remind_password a:hover {
+  color: #ff0000;
+}
+.account_box .login_form input {
+  margin: 10px;
+  height: 30px;
+  width: 350px;
+  text-indent: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #383838;
+}
+.account_box .login_form input[type=submit] {
+  width: 150px;
+  margin-top: 50px;
+}
+.account_box .login_form input:focus {
+  border: 2px solid #1c1c1c;
+}
+.account_box .login_form .register {
+  color: white;
+}
+.account_box .login_form .register_link {
+  color: white;
+  transition: 0.5s;
+}
+.account_box .login_form .register_link:hover {
+  color: #ff0000;
+}
+
+.account-main-toggle {
+  display: flex;
+}
+
+.body_blur {
+  filter: blur(2px);
+}
+
 @media screen and (min-width: 1024px) {
   header {
     background-color: #1c1c1c;
@@ -30,6 +116,31 @@ body {
   header .header-sett a ion-icon {
     position: relative;
     top: 3px;
+  }
+  header .header-sett .lang_box {
+    background-color: #383838;
+    position: absolute;
+    width: 90px;
+    top: 22px;
+    right: 23px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    transform: scale(0) translateY(20px);
+    transform-origin: top;
+    z-index: 0;
+  }
+  header .header-sett .lang_box a {
+    display: flex;
+    font-size: 13px;
+  }
+  header .header-sett .lang_box a img {
+    width: 18px;
+  }
+  header .header-sett .lang_box-toggle {
+    transform: scale(1) translateY(-5px);
+    transform-style: flat;
   }
   header .header-main {
     padding: 0 15px;
@@ -130,6 +241,7 @@ body {
   main {
     width: 100%;
     height: 80vh;
+    position: relative;
   }
   footer {
     background-color: blue;
@@ -160,6 +272,31 @@ body {
   header .header-sett a ion-icon {
     position: relative;
     top: 3px;
+  }
+  header .header-sett .lang_box {
+    background-color: #383838;
+    position: absolute;
+    width: 90px;
+    top: 22px;
+    right: 23px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    transform: scale(0) translateY(20px);
+    transform-origin: top;
+    z-index: 0;
+  }
+  header .header-sett .lang_box a {
+    display: flex;
+    font-size: 13px;
+  }
+  header .header-sett .lang_box a img {
+    width: 18px;
+  }
+  header .header-sett .lang_box-toggle {
+    transform: scale(1) translateY(-5px);
+    transform-style: flat;
   }
   header .header-main {
     padding: 0 15px;
@@ -259,6 +396,69 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
+  .account_box {
+    position: relative;
+    background-color: #383838;
+    border-radius: 10px;
+    opacity: 100%;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+  }
+  .account_box .login_form {
+    width: max-content;
+    height: 400px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  .account_box .login_form h1 {
+    color: white;
+    margin-bottom: 50px;
+    font-size: 13vw;
+  }
+  .account_box .login_form .remind_password {
+    position: unset;
+  }
+  .account_box .login_form .remind_password a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    justify-content: right;
+    display: flex;
+    float: right;
+  }
+  .account_box .login_form input {
+    margin: 10px;
+    height: 30px;
+    width: 80%;
+    text-indent: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #383838;
+  }
+  .account_box .login_form input[type=submit] {
+    width: 150px;
+    margin-top: 50px;
+  }
+  .account_box .login_form input:focus {
+    border: 2px solid #1c1c1c;
+  }
+  .account_box .login_form .register {
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  .account_box .login_form .register_link {
+    color: white;
+    transition: 0.5s;
+  }
+  .account_box .login_form .register_link:hover {
+    color: #ff0000;
+  }
   header {
     background-color: #1c1c1c;
     width: 100%;
@@ -281,6 +481,31 @@ body {
   }
   header .header-sett a ion-icon {
     position: absolute;
+  }
+  header .header-sett .lang_box {
+    background-color: #383838;
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    right: unset;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    transform: scaleY(0) translateY(10px);
+    transform-origin: top;
+    z-index: 0;
+  }
+  header .header-sett .lang_box a {
+    display: flex;
+    font-size: 13px;
+  }
+  header .header-sett .lang_box a img {
+    width: 18px;
+  }
+  header .header-sett .lang_box-toggle {
+    transform: scaleY(1) translateY(-10px);
+    transform-style: flat;
   }
   header .header-main {
     padding: 0px;
