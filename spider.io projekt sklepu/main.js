@@ -8,6 +8,7 @@ choose_lang.addEventListener("click", function(){
 
 const toggle_account = document.querySelector("#toggle_account")
 const account_main = document.querySelector("#account_main")
+const account_box = document.querySelector("#account_box")
 const header = document.querySelector("header")
 const main = document.querySelector("main")
 const footer = document.querySelector("footer")
