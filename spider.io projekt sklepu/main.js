@@ -35,3 +35,24 @@ document.addEventListener('click', function handleClickOutsideBox(event) {
         body.style.overflow="auto"
     }
   });
+
+
+
+
+const dropdownContent = document.querySelector("#dropdown-content")
+const dropdownMenu = document.querySelector(".dropdown-menu")
+const menuContent = document.querySelector('.menu-content')
+var i;
+
+for (i = 0; i < menuContent.length; i++) {
+    dropdownContent[i].addEventListener("click", function() {
+        console.log("eee")
+    // this.classList.toggle("active");
+    // var dropdownContent = this.nextElementSibling;
+    // if (dropdownContent.style.display === "block") {
+    //   dropdownContent.style.display = "none";
+    // } else {
+    //   dropdownContent.style.display = "block";
+    // }
+  });
+}

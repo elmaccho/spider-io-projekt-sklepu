@@ -2,6 +2,7 @@ $background: #1c1c1c;
 $background2: #383838;
 $background3: white;
 $background4: #ececec;
+$background5: #555555;
 
 $accent: #ff0000;
 $acc-hover:#ce0000;
@@ -48,10 +49,9 @@ body{
             display: flex;
             flex-direction: column;
             width:70%;
-            height: 70%;
+            height: 75%;
         
             transition: 0.5s;
-    
     
             .login_form{
                 display: flex;
@@ -61,7 +61,13 @@ body{
                 height: 80%;
                 justify-content: center;
                 align-self: center;
-    
+                
+                .account-title{
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                    display: flex;
+                    justify-content: center;
+                }
                 .input-title{
                     margin-bottom: 5px;
                 }
@@ -363,6 +369,7 @@ body{
         }
 
         .nav-menu{
+            transition: 0.5s;
             width: 20%;
             margin: 30px 15px;
             padding: 10px;
@@ -389,6 +396,28 @@ body{
                     margin: 5px 0;
                     height: 40px;
                     padding-left: 15px;
+                    position: relative;
+                    
+                    ion-icon{
+                        position: absolute;
+                        right:10px;
+                    }
+                }
+                .dropdown-menu{
+                    display: flex;
+                    justify-content: left;
+                    flex-direction: column;
+
+                    .menu-list-title-dropdown{
+                        display: flex;
+                        color:$font2;
+                        align-items: center;
+                        text-decoration: none;
+                        background-color: $background5;
+                        margin: 5px 0;
+                        height: 40px;
+                        padding-left: 15px;
+                    }
                 }
             }
         }
@@ -433,7 +462,14 @@ body{
                 height: 80%;
                 justify-content: center;
                 align-self: center;
-    
+
+                .account-title{
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                    display: flex;
+                    justify-content: center;
+                }
+
                 .input-title{
                     margin-bottom: 5px;
                 }
@@ -734,14 +770,66 @@ body{
         }
 
         .nav-menu{
+            transition: 0.5s;
             width: 20%;
-            height: 80vh;
+            margin-top: 15px;
+            padding: 10px;
+            height: max-content;
+            background-color: $background;
+            // box-sizing: border-box;
+
+            .menu-title{
+                color: $font2;
+                display: flex;
+                justify-content: center;
+            }
+            .menu-content{
+                display: flex;
+                justify-content: left;
+                flex-direction: column;
+
+                .menu-list-title{
+                    display: flex;
+                    color:$font2;
+                    align-items: center;
+                    text-decoration: none;
+                    background-color: $background2;
+                    margin: 5px 0;
+                    height: 40px;
+                    padding-left: 15px;
+                    position: relative;
+                    font-size: 13px;
+                    
+                    ion-icon{
+                        position: absolute;
+                        right:10px;
+                    }
+                }
+                .dropdown-menu{
+                    display: flex;
+                    justify-content: left;
+                    flex-direction: column;
+
+                    .menu-list-title-dropdown{
+                        display: flex;
+                        color:$font2;
+                        align-items: center;
+                        text-decoration: none;
+                        background-color: $background5;
+                        margin: 5px 0;
+                        height: 40px;
+                        padding-left: 15px;
+                        font-size: 13px;
+                    }
+                }
+            }
         }
 
     }
 }
 
 @media screen and (max-width: 767px){
+    
     .account-main{
         position: absolute;
         width:100%;
@@ -774,6 +862,13 @@ body{
                 justify-content: center;
                 align-self: center;
     
+                .account-title{
+                    font-size: 8vw;
+                    margin-bottom: 15px;
+                    display: flex;
+                    justify-content: center;
+                }
+
                 .input-title{
                     margin-bottom: 5px;
                 }
@@ -1069,23 +1164,77 @@ body{
         }
     }
     main{
+        
         width: 100%;
         height: max-content;
         position: relative;
         display: flex;
+        flex-direction: column;
 
         background-color: gold;
 
         .product-box{
             background-color: navajowhite;
-            width: 80%;
+            width: 100%;
             height: 80vh;
         }
 
         .nav-menu{
-            width: 20%;
-            height: 80vh;
+            transition: 0.5s;
+            width: 100%;
+            margin-top: 50px;
+            padding: 10px;
+            height: max-content;
+            background-color: $background;
+            box-sizing: border-box;
+
+            .menu-title{
+                color: $font2;
+                display: flex;
+                justify-content: center;
+            }
+            .menu-content{
+                display: flex;
+                justify-content: left;
+                flex-direction: column;
+
+                .menu-list-title{
+                    display: flex;
+                    color:$font2;
+                    align-items: center;
+                    text-decoration: none;
+                    background-color: $background2;
+                    margin: 5px 0;
+                    height: 40px;
+                    padding-left: 15px;
+                    position: relative;
+                    font-size: 15px;
+                    
+                    ion-icon{
+                        position: absolute;
+                        right:10px;
+                    }
+                }
+                .dropdown-menu{
+                    display: flex;
+                    justify-content: left;
+                    flex-direction: column;
+
+                    .menu-list-title-dropdown{
+                        display: flex;
+                        color:$font2;
+                        align-items: center;
+                        text-decoration: none;
+                        background-color: $background5;
+                        margin: 5px 0;
+                        height: 40px;
+                        padding-left: 15px;
+                        font-size: 15px;
+                    }
+                }
+            }
         }
+
 
     }
 }

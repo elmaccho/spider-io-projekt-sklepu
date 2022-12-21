@@ -15,8 +15,8 @@
     <div class="account-main" id="account_main">
         <div class="account_box" id="account_box">
 
-            <h3>Logowanie</h3>
             <form action="" id="login_form" class="login_form">
+                <h3 class="account-title">Logowanie</h3>
                 <p class="input-title">E-mail</p><input type="text" name="" id="" placeholder="E-mail"><br>
                 <p class="input-title">Hasło</p><input type="password" name="" id="" placeholder="Hasło"><br>
                 <input type="submit" value="Zaloguj się">
@@ -71,22 +71,44 @@
 
     <main>
         <div class="nav-menu">
-            <h1 class="menu-title">Menu</h1>
+            <h1 class="menu-title">Oferta</h1>
                 <div class="menu-content">
-                    <a class="menu-list-title" href="#ptaszniki">Ptaszniki<ion-icon name="chevron-down"></ion-icon></a>
-                    <a class="menu-list-title" href="#karmowka">Karmówka<ion-icon name="chevron-down"></ion-icon></a>
-                    <a class="menu-list-title" href="#wystrojidekoracje">Wystrój i dekoracje<ion-icon name="chevron-down"></ion-icon></a>
-                    <a class="menu-list-title" href="#terraria">Terraria<ion-icon name="chevron-down"></ion-icon></a>
-                    <a class="menu-list-title" href="#inne">Inne zwierzęta<ion-icon name="chevron-down"></ion-icon></a>
-                    <a class="menu-list-title" href="#akcesoria">Akcesoria<ion-icon name="chevron-down"></ion-icon></a>
+                    <a id="dropdown-content" class="menu-list-title" href="#ptaszniki">Ptaszniki<ion-icon name="chevron-down"></ion-icon></a>
+                        <div class="dropdown-menu">
+                            <a class="menu-list-title-dropdown"  href="#listapajakow">Lista pająków</a>
+                            <a class="menu-list-title-dropdown"  href="#samice">Samice</a>
+                            <a class="menu-list-title-dropdown"  href="#samce">Samce</a>
+                            <a class="menu-list-title-dropdown"  href="#młode">Młody</a>
+                        </div>
+                    <a id="dropdown-content" class="menu-list-title" href="#karmowka">Karmówka<ion-icon name="chevron-down"></ion-icon></a>
+                        <div class="dropdown-menu">
+                            <a class="menu-list-title-dropdown"  href="#drewnojady">Drewnojady</a>
+                            <a class="menu-list-title-dropdown"  href="#karaczanytureckie">Karaczany Tureckie</a>
+                            <a class="menu-list-title-dropdown"  href="#karaczanyargentynskie">Karaczany Argentyńskie</a>
+                            <a class="menu-list-title-dropdown"  href="#karaczanymadagaskarskie">Karaczany Madagaskarckie</a>
+                        </div>
+                    <a class="menu-list-title" href="#wystrojidekoracje">Wystrój i dekoracje</a>
+                    <a id="dropdown-content" class="menu-list-title" href="#terraria">Terraria<ion-icon name="chevron-down"></ion-icon></a>
+                        <div class="dropdown-menu">
+                            <a class="menu-list-title-dropdown"  href="#male">Małe</a>
+                            <a class="menu-list-title-dropdown"  href="#srednie">Średnie</a>
+                            <a class="menu-list-title-dropdown"  href="#duze">Duże</a>
+                        </div>
+                    <a id="dropdown-content" class="menu-list-title" href="#inne">Inne zwierzęta<ion-icon name="chevron-down"></ion-icon></a>
+                        <div class="dropdown-menu">
+                            <a class="menu-list-title-dropdown"  href="#tarantule">Tarantule</a>
+                            <a class="menu-list-title-dropdown"  href="#skorpiony">Skorpiony</a>
+                            <a class="menu-list-title-dropdown"  href="#modliszki">Modliszki</a>
+                        </div>
+                    <a class="menu-list-title" href="#akcesoria">Akcesoria</a>
                 </div>
         </div>
 
         <div class="product-box">
-
+            sranie sranie sranie sranie test
         </div>
     </main>
-    <footer></footer>
+    <footer>Copyright © Maciej Chojnacki</footer>
     <script src="./main.js"></script>
 </body>
 </html>
