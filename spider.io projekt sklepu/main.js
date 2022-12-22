@@ -39,20 +39,33 @@ document.addEventListener('click', function handleClickOutsideBox(event) {
 
 
 
-const dropdownContent = document.querySelector("#dropdown-content")
-const dropdownMenu = document.querySelector(".dropdown-menu")
-const menuContent = document.querySelector('.menu-content')
+const dropdownContent = document.querySelectorAll("#dropdown-content")
 var i;
 
-for (i = 0; i < menuContent.length; i++) {
-    dropdownContent[i].addEventListener("click", function() {
-        console.log("eee")
-    // this.classList.toggle("active");
-    // var dropdownContent = this.nextElementSibling;
-    // if (dropdownContent.style.display === "block") {
-    //   dropdownContent.style.display = "none";
-    // } else {
-    //   dropdownContent.style.display = "block";
-    // }
-  });
+for(i=0; i<dropdownContent.length; i++){
+    dropdownContent[i].addEventListener("click",function(){
+        console.log('e')
+
+        var dropdownMenu = this.nextElementSibling;
+
+
+        if (!dropdownMenu.classList.contains("menu-open")) {
+            dropdownMenu.classList.add("menu-open");
+            dropdownMenu.classList.remove("menu-close")
+
+            document.querySelectorAll("#menu-ion-icon").forEach(el => {
+                el.style.transform = "rotateX(180deg)";
+            });
+
+        }else{
+            dropdownMenu.classList.add("menu-close");
+            dropdownMenu.classList.remove("menu-open");
+
+            document.querySelectorAll("#menu-ion-icon").forEach(el => {
+                el.style.transform = "rotateX(0deg)";
+            });
+        }
+        
+    })
 }
+

@@ -196,10 +196,6 @@ body{
     .body_blur{
         filter: blur(2px);
     }
-    
-    
-
-    
     header{
         background-color: $background;
         width: 100%;
@@ -393,7 +389,7 @@ body{
                     align-items: center;
                     text-decoration: none;
                     background-color: $background2;
-                    margin: 5px 0;
+                    margin: 2px 0;
                     height: 40px;
                     padding-left: 15px;
                     position: relative;
@@ -401,10 +397,10 @@ body{
                     ion-icon{
                         position: absolute;
                         right:10px;
+                        transition: 0.5s;
                     }
                 }
                 .dropdown-menu{
-                    display: flex;
                     justify-content: left;
                     flex-direction: column;
 
@@ -419,14 +415,74 @@ body{
                         padding-left: 15px;
                     }
                 }
+                .menu-open{
+                    overflow: hidden;
+                    max-height: 300px;
+                    transition: max-height 0.5s ease-in-out; 
+                }
+                .menu-close{
+                    overflow: hidden;
+                    max-height: 0;
+                    transition: max-height 0.5s ease-in-out;
+                }
             }
         }
 
     }
     footer{
-        background-color: blue;
+        background-color: $background;
         width: 100%;
-        height: 100px;
+        min-height: 25vh;
+        padding: 45px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img{
+            width: 250px;
+        }
+        
+        .footer-content{
+            
+            table{
+                color:$font2;
+
+                hr{
+                    background-color: white;;
+                }
+                .about-us{
+                    text-decoration: none;
+                    color:$font2;
+                    transition: 0.5s;
+                }
+
+                .about-us:hover{
+                    color:$accent;
+                }
+                hr{
+                    background-color: white;
+                    transition: 0.5s;
+                }
+                .about-us:hover hr{
+                    background-color: $accent;
+                    color:$accent;
+                }
+                td{
+                    // border:1px solid white;
+                    padding: 15px;
+                }
+                .phone-contact{
+                    font-size: 25px;
+                }
+                .footer-title{
+                    font-size: 25px;
+                }
+                .footer-info{
+                    padding:15px;
+                }
+            }
+        }
     }
 }
 
@@ -803,6 +859,7 @@ body{
                     ion-icon{
                         position: absolute;
                         right:10px;
+                        transition: 0.5s;
                     }
                 }
                 .dropdown-menu{
@@ -817,14 +874,82 @@ body{
                         text-decoration: none;
                         background-color: $background5;
                         margin: 5px 0;
-                        height: 40px;
+                        min-height: 40px;
                         padding-left: 15px;
                         font-size: 13px;
                     }
                 }
+                .menu-open{
+                    overflow: hidden;
+                    max-height: 300px;
+                    transition: max-height 0.5s ease-in-out;
+
+                }
+                .menu-close{
+                    overflow: hidden;
+                    max-height: 0;
+                    transition: max-height 0.5s ease-in-out;
+
+                }
             }
         }
 
+    }
+    footer{
+        background-color: $background;
+        width: 100%;
+        min-height: 25vh;
+        padding: 45px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+
+        img{
+            width: 250px;
+        }
+        
+        .footer-content{
+            
+            table{
+                color:$font2;
+
+                hr{
+                    background-color: white;;
+                }
+                .about-us{
+                    text-decoration: none;
+                    color:$font2;
+                    transition: 0.5s;
+                }
+
+                .about-us:hover{
+                    color:$accent;
+                }
+                hr{
+                    background-color: white;
+                    transition: 0.5s;
+                }
+                .about-us:hover hr{
+                    background-color: $accent;
+                    color:$accent;
+                }
+                td{
+                    // border:1px solid white;
+                    padding: 15px;
+                }
+                .phone-contact{
+                    font-size: 25px;
+                }
+                .footer-title{
+                    font-size: 25px;
+                }
+                .footer-info{
+                    padding:15px;
+                }
+            }
+        }
     }
 }
 
@@ -1213,6 +1338,7 @@ body{
                     ion-icon{
                         position: absolute;
                         right:10px;
+                        transition: 0.5s;
                     }
                 }
                 .dropdown-menu{
@@ -1227,14 +1353,80 @@ body{
                         text-decoration: none;
                         background-color: $background5;
                         margin: 5px 0;
-                        height: 40px;
+                        min-height: 40px;
                         padding-left: 15px;
-                        font-size: 15px;
+                        font-size: 13px;
                     }
+                }
+                .menu-open{
+                    overflow: hidden;
+                    max-height: 300px;
+                    transition: max-height 0.5s ease-in-out; 
+                }
+                .menu-close{
+                    overflow: hidden;
+                    max-height: 0;
+                    transition: max-height 0.5s ease-in-out;
                 }
             }
         }
 
 
     }
-}
+    footer{
+        background-color: $background;
+        width: 100%;
+        min-height: 25vh;
+        padding: 45px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+
+        img{
+            width: 250px;
+        }
+        
+        .footer-content{
+            display: flex;
+            flex-direction: column;
+            color:$font2;
+
+                hr{
+                    background-color: white;;
+                }
+                .about-us{
+                    text-decoration: none;
+                    color:$font2;
+                    transition: 0.5s;
+                }
+
+                .about-us:hover{
+                    color:$accent;
+                }
+                hr{
+                    background-color: white;
+                    transition: 0.5s;
+                }
+                .about-us:hover hr{
+                    background-color: $accent;
+                    color:$accent;
+                }
+                td{
+                    // border:1px solid white;
+                    padding: 10px;
+                    
+                }
+                .phone-contact{
+                    font-size: 25px;
+                }
+                .footer-title{
+                    font-size: 25px;
+                }
+                .footer-info{
+                    padding:15px;
+                }
+            }
+        }
+    }
