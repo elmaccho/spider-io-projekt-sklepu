@@ -14,6 +14,12 @@ const main = document.querySelector("main")
 const footer = document.querySelector("footer")
 const body = document.querySelector("body")
 
+document.addEventListener("click", function closelang(event){
+    if(!choose_lang.contains(event.target) && !lang_box.contains(event.target)){
+        lang_box.classList.remove("lang_box-toggle")
+    }
+})
+
 toggle_account.addEventListener("click", function(){
     console.log('eeeee')
     account_main.classList.toggle("account-main-toggle")
