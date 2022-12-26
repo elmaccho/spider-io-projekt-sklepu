@@ -17,7 +17,6 @@ $font2: white;
 }
 body{
     font-family: 'Chivo Mono', monospace;
-    
 }
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
@@ -47,7 +46,37 @@ body{
         transform:translateY(0%);
     }
 }
-
+@keyframes cartmainOpen{
+    0%{
+        transform:translate(-50%, -50%) scale(0);
+    }
+    40%{
+        transform:translate(-50%, -50%) scale(1.2);
+    }
+    100%{
+        transform:translate(-50%, -50%) scale(1);
+    }
+}
+@keyframes cartmainClose{
+    0%{
+        transform:translate(-50%, -50%) scale(1);
+    }
+    40%{
+        transform:translate(-50%, -50%) scale(1.2);
+    }
+    100%{
+        transform:translate(-50%, -50%) scale(0);
+    }
+}
+.cartaddOpen{
+    animation-name: cartmainOpen;
+    animation-duration: 1s;
+    display: block;
+}
+.cartaddClose{
+    animation-name: cartmainClose;
+    animation-duration: 1s;
+}
 // LAPTOP, DESKTOP
 
 @media screen and (min-width:1024px) {
@@ -214,8 +243,76 @@ body{
         animation-name: accountbox;
         animation-duration:1s;
     }
+    .cart-main{
+        z-index: 1;
+        position: fixed;
+        background-color: $accent;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+        height: 450px;
+        box-shadow: $accent 0px 10px 36px 0px, $accent 0px 0px 0px 1px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        transition: 0.5s ease-in-out;
+        display: none;
+        
+
+        .cart-message{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            flex-direction: column;
+
+            h1{
+                font-size: 25px;
+                color:$font2;
+            }
+            .checkmark__circle {
+                stroke-dasharray: 166;
+                stroke-dashoffset: 166;
+                stroke-width: 2;
+                stroke-miterlimit: 10;
+                stroke: $font2;
+                fill: none;
+                animation: stroke 1s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+              }
+              
+              .checkmark {
+                width: 156px;
+                height: 156px;
+                border-radius: 50%;
+                display: block;
+                stroke-width: 2;
+                stroke: $font2;
+                stroke-miterlimit: 10;
+                margin: 10% auto;
+                box-shadow: inset 0px 0px 0px $font2;
+                animation: fill 1s ease-in-out 1s forwards, scale 1s ease-in-out 1s both;
+              }
+              
+              .checkmark__check {
+                transform-origin: 50% 50%;
+                stroke-dasharray: 48;
+                stroke-dashoffset: 48;
+                animation: stroke 0.8s cubic-bezier(0.65, 0, 0.45, 1) 1s forwards;
+              }
+              
+              @keyframes stroke {
+                100% {
+                  stroke-dashoffset: 0;
+                }
+            }
+        }
+
+
+    }
+
     .body_blur{
-        filter: blur(2px);
+        transition: 0.5s;
+        filter: blur(3px);
     }
     header{
         background-color: $background;
@@ -371,6 +468,9 @@ body{
             .cart-box:hover{
                 background-color: $acc-hover;
             }
+
+
+
         }
     }
     main{
@@ -774,6 +874,74 @@ body{
         animation-name: accountbox;
         animation-duration:1s;
     }
+    .cart-main{
+        z-index: 1;
+        position: fixed;
+        background-color: $accent;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+        height: 450px;
+        box-shadow: $accent 0px 10px 36px 0px, $accent 0px 0px 0px 1px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        transition: 0.5s ease-in-out;
+        display: none;
+        
+
+        .cart-message{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            flex-direction: column;
+
+            h1{
+                font-size: 25px;
+                color:$font2;
+            }
+            .checkmark__circle {
+                stroke-dasharray: 166;
+                stroke-dashoffset: 166;
+                stroke-width: 2;
+                stroke-miterlimit: 10;
+                stroke: $font2;
+                fill: none;
+                animation: stroke 1s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+              }
+              
+              .checkmark {
+                width: 156px;
+                height: 156px;
+                border-radius: 50%;
+                display: block;
+                stroke-width: 2;
+                stroke: $font2;
+                stroke-miterlimit: 10;
+                margin: 10% auto;
+                box-shadow: inset 0px 0px 0px $font2;
+                animation: fill 1s ease-in-out 1s forwards, scale 1s ease-in-out 1s both;
+              }
+              
+              .checkmark__check {
+                transform-origin: 50% 50%;
+                stroke-dasharray: 48;
+                stroke-dashoffset: 48;
+                animation: stroke 0.8s cubic-bezier(0.65, 0, 0.45, 1) 1s forwards;
+              }
+              
+              @keyframes stroke {
+                100% {
+                  stroke-dashoffset: 0;
+                }
+            }
+        }
+
+
+    }
+
+
     .body_blur{
         filter: blur(2px);
     }
@@ -1349,6 +1517,74 @@ body{
         animation-name: accountbox;
         animation-duration:1s;
     }
+    .cart-main{
+        z-index: 2;
+        position: fixed;
+        background-color: $accent;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+        height: 450px;
+        box-shadow: $accent 0px 10px 36px 0px, $accent 0px 0px 0px 1px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        transition: 0.5s ease-in-out;
+        display: none;
+        
+
+        .cart-message{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            flex-direction: column;
+
+            h1{
+                font-size: 25px;
+                color:$font2;
+            }
+            .checkmark__circle {
+                stroke-dasharray: 166;
+                stroke-dashoffset: 166;
+                stroke-width: 2;
+                stroke-miterlimit: 10;
+                stroke: $font2;
+                fill: none;
+                animation: stroke 1s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+              }
+              
+              .checkmark {
+                width: 156px;
+                height: 156px;
+                border-radius: 50%;
+                display: block;
+                stroke-width: 2;
+                stroke: $font2;
+                stroke-miterlimit: 10;
+                margin: 10% auto;
+                box-shadow: inset 0px 0px 0px $font2;
+                animation: fill 1s ease-in-out 1s forwards, scale 1s ease-in-out 1s both;
+              }
+              
+              .checkmark__check {
+                transform-origin: 50% 50%;
+                stroke-dasharray: 48;
+                stroke-dashoffset: 48;
+                animation: stroke 0.8s cubic-bezier(0.65, 0, 0.45, 1) 1s forwards;
+              }
+              
+              @keyframes stroke {
+                100% {
+                  stroke-dashoffset: 0;
+                }
+            }
+        }
+
+
+    }
+
+
     .body_blur{
         filter: blur(2px);
     }
@@ -1771,9 +2007,8 @@ body{
             align-items: center;
             display: flex;
             flex-direction: column;
-            width:70%;
+            width:85%;
             height: 70%;
-        
             transition: 0.5s;
     
     
@@ -1922,6 +2157,72 @@ body{
         display: flex;
         animation-name: accountbox;
         animation-duration:1s;
+    }
+    .cart-main{
+        z-index: 2;
+        position: fixed;
+        background-color: $accent;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 450px;
+        box-shadow: $accent 0px 10px 36px 0px, $accent 0px 0px 0px 1px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        transition: 0.5s ease-in-out;
+        display: none;
+        
+
+        .cart-message{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            flex-direction: column;
+
+            h1{
+                font-size: 25px;
+                color:$font2;
+            }
+            .checkmark__circle {
+                stroke-dasharray: 166;
+                stroke-dashoffset: 166;
+                stroke-width: 2;
+                stroke-miterlimit: 10;
+                stroke: $font2;
+                fill: none;
+                animation: stroke 1s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+              }
+              
+              .checkmark {
+                width: 156px;
+                height: 156px;
+                border-radius: 50%;
+                display: block;
+                stroke-width: 2;
+                stroke: $font2;
+                stroke-miterlimit: 10;
+                margin: 10% auto;
+                box-shadow: inset 0px 0px 0px $font2;
+                animation: fill 1s ease-in-out 1s forwards, scale 1s ease-in-out 1s both;
+              }
+              
+              .checkmark__check {
+                transform-origin: 50% 50%;
+                stroke-dasharray: 48;
+                stroke-dashoffset: 48;
+                animation: stroke 0.8s cubic-bezier(0.65, 0, 0.45, 1) 1s forwards;
+              }
+              
+              @keyframes stroke {
+                100% {
+                  stroke-dashoffset: 0;
+                }
+            }
+        }
+
+
     }
     .body_blur{
         filter: blur(2px);

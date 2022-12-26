@@ -59,19 +59,72 @@ for(i=0; i<dropdownContent.length; i++){
             dropdownMenu.classList.add("menu-open");
             dropdownMenu.classList.remove("menu-close")
 
-            document.querySelectorAll("#menu-ion-icon").forEach(el => {
-                el.style.transform = "rotateX(180deg)";
-            });
+            // document.querySelector("#menu-ion-icon").style.transform = "rotateX(180deg)";
+            // document.querySelectorAll("#menu-ion-icon").forEach(el => {
+            //     el.style.transform = "rotateX(180deg)";
+            // });
 
         }else{
             dropdownMenu.classList.add("menu-close");
             dropdownMenu.classList.remove("menu-open");
 
-            document.querySelectorAll("#menu-ion-icon").forEach(el => {
-                el.style.transform = "rotateX(0deg)";
-            });
+            // document.querySelector("#menu-ion-icon").style.transform = "rotateX(0deg)";
         }
         
     })
 }
 
+
+
+
+const cartBtn = document.querySelectorAll(".cartBtn")
+const cartMain = document.querySelector('.cart-main')
+
+for (let i=0; i<cartBtn.length; i++){
+    
+    cartBtn[i].addEventListener("click", function(){
+
+
+        if(cartMain.classList.contains("cartaddClose")){
+            cartMain.classList.remove("cartaddClose")
+            cartMain.classList.add("cartaddOpen")
+            cartMain.style.display ="flex"
+
+            header.classList.add("body_blur")
+            main.classList.add("body_blur")
+            footer.classList.add("body_blur")
+            body.style.overflow="hidden"
+
+            setTimeout(() => {
+
+                header.classList.remove("body_blur")
+                main.classList.remove("body_blur")
+                footer.classList.remove("body_blur")
+                body.style.overflow="auto"
+
+                cartMain.classList.add("cartaddClose")
+                cartMain.classList.remove("cartaddOpen")
+                setTimeout(() => {
+                    cartMain.style.display ="none"
+                }, 900);
+            }, 2000);
+        }
+    })
+}
+
+
+// cartBox.addEventListener("click", function(){
+//     cartMain.style.transform = "translate(-50%, -50%) scale(1)"
+//     header.classList.add("body_blur")
+//     main.classList.add("body_blur")
+//     footer.classList.add("body_blur")
+//     body.style.overflow="hidden"
+
+//     setTimeout(() => {
+//         cartMain.style.transform = "translate(-50%, -50%) scale(0)"
+//         header.classList.remove("body_blur")
+//         main.classList.remove("body_blur")
+//         footer.classList.remove("body_blur")
+//         body.style.overflow="auto"
+//     }, 2000);
+// })
