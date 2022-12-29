@@ -11,6 +11,29 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
+    <div class="account-main" id="account_main">
+        <div class="account_box" id="account_box">
+
+            <form action="" id="login_form" class="login_form">
+                <h3 class="account-title">Logowanie</h3>
+                <p class="input-title">E-mail</p><input type="text" name="" id="" placeholder="E-mail"><br>
+                <p class="input-title">Hasło</p><input type="password" name="" id="" placeholder="Hasło"><br>
+                <input type="submit" value="Zaloguj się">
+
+                <div class="form_sett">
+                    <label class="rememberme">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <p>Zapamiętaj mnie</p>
+                    </label>
+    
+                    <a href="" class="remind_pass">Zapomniałem hasła</a>
+                </div>
+            </form>
+            <span class="reg">Nie masz konta?<a href="" class="register-link">Zarejestruj się!</a></span>
+
+        </div>
+    </div>
     <header> 
         <div class="header-sett">
             <a href="#" id="toggle_account">Konto<ion-icon name="caret-down"></ion-icon></a>
@@ -51,13 +74,13 @@
 
                     <div class="quantity">
                         <button class="minus">-</button>
-                        <input type="number" name="" id="" min="1" max="100" value="1">
+                        <input type="text" name="" min="1" max="100" value="1" id="quantity" oninput="myFunction(this.value)">
                         <button class="plus">+</button>
                     </div>
 
-                    <p id="price">69,00zł</p>
+                    <p id="price">69.00</p>
 
-                    <button class="remove-item"><ion-icon name="trash-outline"></ion-icon></button>
+                    <button class="remove-item"><ion-icon name="close-outline"></ion-icon></button>
                 </div>
                 <div class="item-box">
                     <img src="./img/ptaszniki/neoholotheleinceigold.jpg" alt="">
@@ -72,7 +95,7 @@
 
                     <p id="price">69,00zł</p>
 
-                    <button class="remove-item"><ion-icon name="trash-outline"></ion-icon></button>
+                    <button class="remove-item"><ion-icon name="close-outline"></ion-icon></button>
                 </div>
                 <div class="item-box">
                     <img src="./img/ptaszniki/caribenaversicolor.jpg" alt="">
@@ -87,7 +110,7 @@
 
                     <p id="price">69,00zł</p>
 
-                    <button class="remove-item"><ion-icon name="trash-outline"></ion-icon></button>
+                    <button class="remove-item"><ion-icon name="close-outline"></ion-icon></button>
                 </div>
                 <button class="continue">Kontynuuj
                     <ion-icon name="arrow-forward-outline"></ion-icon>
@@ -128,5 +151,6 @@
             </ul>
         </div>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>
