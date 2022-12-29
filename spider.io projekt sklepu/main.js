@@ -74,9 +74,6 @@ for(i=0; i<dropdownContent.length; i++){
     })
 }
 
-
-
-
 const cartBtn = document.querySelectorAll(".cartBtn")
 const cartMain = document.querySelector('.cart-main')
 
@@ -111,20 +108,3 @@ for (let i=0; i<cartBtn.length; i++){
         }
     })
 }
-
-
-// cartBox.addEventListener("click", function(){
-//     cartMain.style.transform = "translate(-50%, -50%) scale(1)"
-//     header.classList.add("body_blur")
-//     main.classList.add("body_blur")
-//     footer.classList.add("body_blur")
-//     body.style.overflow="hidden"
-
-//     setTimeout(() => {
-//         cartMain.style.transform = "translate(-50%, -50%) scale(0)"
-//         header.classList.remove("body_blur")
-//         main.classList.remove("body_blur")
-//         footer.classList.remove("body_blur")
-//         body.style.overflow="auto"
-//     }, 2000);
-// })
