@@ -1,3 +1,5 @@
+    // LANG
+
 const choose_lang = document.querySelector("#choose_lang")
 const lang_box = document.querySelector("#lang_box")
 
@@ -6,13 +8,17 @@ choose_lang.addEventListener("click", function(){
     lang_box.classList.toggle("lang_box-toggle")
 })
 
+    // LANG
+
+    // ACCOUNT
+
 const toggle_account = document.querySelector("#toggle_account")
 const account_main = document.querySelector("#account_main")
 const account_box = document.querySelector("#account_box")
 const header = document.querySelector("header")
 const main = document.querySelector("main")
 const footer = document.querySelector("footer")
-const body = document.querySelector("body")
+let body = document.querySelector("body")
 
 document.addEventListener("click", function closelang(event){
     if(!choose_lang.contains(event.target) && !lang_box.contains(event.target)){
@@ -26,9 +32,8 @@ toggle_account.addEventListener("click", function(){
     header.classList.toggle("body_blur")
     main.classList.toggle("body_blur")
     footer.classList.toggle("body_blur")
-    body.style.overflow="hidden"
+    body.style.overflow = "scroll"
 })
-
 
 document.addEventListener('click', function handleClickOutsideBox(event) {
  
@@ -38,11 +43,12 @@ document.addEventListener('click', function handleClickOutsideBox(event) {
         header.classList.remove("body_blur")
         main.classList.remove("body_blur")
         footer.classList.remove("body_blur")
-        body.style.overflow="auto"
     }
   });
 
+    // ACCOUNT
 
+    
 const price = document.querySelector("#price")
 
 const minus = document.querySelector(".minus")
