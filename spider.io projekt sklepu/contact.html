@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="account-main" id="account_main">
+        <div class="account_box" id="account_box">
+
+            <form action="" id="login_form" class="login_form">
+                <h3 class="account-title">Logowanie</h3>
+                <p class="input-title">E-mail</p><input type="text" name="" id="" placeholder="E-mail"><br>
+                <p class="input-title">Hasło</p><input type="password" name="" id="" placeholder="Hasło"><br>
+                <input type="submit" value="Zaloguj się">
+
+                <div class="form_sett">
+                    <label class="rememberme">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <p>Zapamiętaj mnie</p>
+                    </label>
+    
+                    <a href="" class="remind_pass">Zapomniałem hasła</a>
+                </div>
+            </form>
+            <span class="reg">Nie masz konta?<a href="" class="register-link">Zarejestruj się!</a></span>
+
+        </div>
+    </div>
+    <header> 
+        <div class="header-sett">
+            <a href="#" id="toggle_account">Konto<ion-icon name="caret-down"></ion-icon></a>
+
+            <a href="./contact.html">kontakt</a>
+            <a href="#" id="choose_lang">Język<ion-icon name="caret-down"></ion-icon></a>
+            <div class="lang_box" id="lang_box">
+                <a href=""><img src="../icon/poland-flag-icon.svg" alt="">Polish</a>
+                <a href=""><img src="../icon/united-kingdom-flag-icon.svg" alt="">English</a>
+            </div>
+        </div>
+
+        <div class="header-main">
+
+            <div class="logo">
+                <a href="">
+                    <img src="./logo.png" alt="logo strony">
+                </a>
+            </div>
+    
+            <div class="search-box">
+                <input type="search" name="" id="" placeholder="Wyszukaj..."><button><ion-icon name="search"></ion-icon></button>
+            </div>
+
+            <a href="cart/cart.html">
+                <div class="cart-box">
+                    <ion-icon name="cart"></ion-icon>
+                    <span id="cart-quantity" class="cart-quantity">0</span>
+                    <hr>
+                    <span id="cart-price" class="cart-price">0,00 zł</span>
+                </div>
+            </a>
+
+        </div>
+
+    </header>
+
+    <main>
+        <div class="contact-boxes">
+            <div class="contact-box">
+                 <ion-icon name="mail-outline"></ion-icon>
+                 <h1>Email</h1>
+                 <p>jebacdisatetrisa2@wp.pl</p>
+            </div>
+     
+            <div class="contact-box">
+                 <ion-icon name="call-outline"></ion-icon>
+                 <h1>Telefon</h1>
+                 <p>+48 111-222-333</p>
+            </div>
+     
+            <div class="contact-box">
+                 <ion-icon name="location-outline"></ion-icon>
+                 <h1>Adres</h1>
+                 <p>Princok ul Borysa Nieznane 69</p>
+            </div>
+        </div>
+
+
+       <form action="" method="post" class="contact-form" onsubmit="return validateForm()" name="myForm">
+            <h1>Skontaktuj się z nami</h1>
+            <input type="text" name="namelastname" id="namee" placeholder="Imię i nazwisko">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="text" name="topic" id="topic" placeholder="Temat">
+            <textarea name="message" id="message" placeholder="Wiadomość..."></textarea>
+            <input type="submit" value="Prześlij">
+       </form>
+
+    </main>
+
+    <footer>
+        <div class="logo">
+            <img src="./logo.png" alt=""><br>
+                Copyright © Maciej Chojnacki
+        </div>
+
+        <div class="footer_info-box">
+            <h1>O nas</h1>
+            <ul>
+                <li><a href="#opinie">Opinie</a></li>
+            </ul>
+        </div>
+<hr>
+        <div class="footer_info-box">
+            <h1>Informacje</h1>
+            <ul>
+                <li><a href="#politykaprywatnosci">Polityka prywatności</a></li>
+                <li><a href="#regulamin">Regulamin</a></li>
+                <li>Wysyłki żywych zwierząt odbywają się od poniedziałku do środy!</li>
+            </ul>
+        </div>
+<hr>
+        <div class="footer_info-box">
+            <h1>Kontakt</h1>
+            <ul>
+                <li>Adres:<br>Princok ul Borysa Nieznane 69</li>
+                <li>Email:<br><a href="mailto:jebacdisatetrisa2@wp.pl">jebacdisatetrisa2@wp.pl</a></li>
+                <li>Potrzebujesz pomocy? Zadzwoń!<br><span class="phone-contact">+48 111-222-333</span></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
