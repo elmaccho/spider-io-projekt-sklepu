@@ -136,6 +136,8 @@ body{
                 input[type="submit"]{
                     margin-top: 20px;
                     background-color: $accent;
+                    color:$font2;
+                    cursor: pointer;
                 }
                 .form_sett{
                     display: flex;
@@ -266,6 +268,7 @@ body{
             text-align: center;
             display: flex;
             align-items: center;
+
 
             h1{
                 font-size: 25px;
@@ -769,6 +772,8 @@ body{
                 input[type="submit"]{
                     margin-top: 20px;
                     background-color: $accent;
+                    color:$font2;
+                    cursor: pointer;
                 }
                 .form_sett{
                     display: flex;
@@ -1351,8 +1356,6 @@ body{
 
 // SMARTPHONE
 
-//TEST
-
 @media screen and (max-width: 767px){
     
     .account-main{
@@ -1410,6 +1413,8 @@ body{
                 input[type="submit"]{
                     margin-top: 20px;
                     background-color: $accent;
+                    color:$font2;
+                    cursor: pointer;
                 }
                 .form_sett{
                     display: flex;
@@ -1525,7 +1530,7 @@ body{
         animation-duration:1s;
     }
     .cart-main{
-        z-index: 1;
+        z-index: 2;
         position: fixed;
         background-color: $accent;
         top:15%;

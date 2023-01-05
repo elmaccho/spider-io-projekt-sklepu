@@ -30,15 +30,13 @@
                     <a href="" class="remind_pass">Zapomniałem hasła</a>
                 </div>
             </form>
-            <span class="reg">Nie masz konta?<a href="../registration/registration.html" class="register-link">Zarejestruj się!</a></span>
+            <span class="reg">Nie masz konta?<a href="" class="register-link">Zarejestruj się!</a></span>
 
         </div>
     </div>
     <header> 
         <div class="header-sett">
-            <a href="#" id="toggle_account">Konto<ion-icon name="caret-down"></ion-icon></a>
-
-            <a href="./contact.html">kontakt</a>
+            <a href="../contact/contact.html">kontakt</a>
             <a href="#" id="choose_lang">Język<ion-icon name="caret-down"></ion-icon></a>
             <div class="lang_box" id="lang_box">
                 <a href=""><img src="../icon/poland-flag-icon.svg" alt="">Polish</a>
@@ -72,35 +70,30 @@
     </header>
 
     <main>
-        <div class="contact-boxes">
-            <div class="contact-box">
-                 <ion-icon name="mail-outline"></ion-icon>
-                 <h1>Email</h1>
-                 <p>jebacdisatetrisa2@wp.pl</p>
-            </div>
-     
-            <div class="contact-box">
-                 <ion-icon name="call-outline"></ion-icon>
-                 <h1>Telefon</h1>
-                 <p>+48 111-222-333</p>
-            </div>
-     
-            <div class="contact-box">
-                 <ion-icon name="location-outline"></ion-icon>
-                 <h1>Adres</h1>
-                 <p>Princok ul Borysa Nieznane 69</p>
-            </div>
-        </div>
 
+        <form action="" method="post" class="form-box">
+            <h1>Rejestracja</h1>
+            <span>
+                <input type="text" name="" id="" placeholder="Imię">
+                <input type="text" name="" id="" placeholder="Nazwisko">
+            </span>
+            <input type="email" name="" id="" placeholder="E-mail">
+            <span class="password-Btn">
+                <input type="password" name="" id="passInput" placeholder="Hasło">
 
-       <form action="" method="post" class="contact-form" onsubmit="return validateForm()" name="myForm">
-            <h1>Skontaktuj się z nami</h1>
-            <input type="text" name="namelastname" id="namee" placeholder="Imię i nazwisko">
-            <input type="email" name="email" id="email" placeholder="Email">
-            <input type="text" name="topic" id="topic" placeholder="Temat">
-            <textarea name="message" id="message" placeholder="Wiadomość..."></textarea>
-            <input type="submit" value="Prześlij">
-       </form>
+                <button type="button" id="passSwitch">
+                    <span id="passON" class="passON show"><ion-icon name="eye-outline"></ion-icon></span>
+                    <span id="passOFF" class="passOFF"><ion-icon name="eye-off-outline"></ion-icon></span>
+                </button>
+                
+            </span>
+
+            <input type="submit" value="Zarejestruj się">
+            <p class="privacy_policy">Rejestrując się, oświadczam iż zapoznałem/łam się z pouczeniem o prawie odstąpienia 
+                od umowy świadczenia usług drogą elektroniczną oraz Polityką Prywatności na temat 
+                zasad przetwarzania danych osobowych i ją akceptuję -<a href="#"> polityka prywatności.</a></p>
+
+        </form>
 
     </main>
 

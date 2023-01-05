@@ -32,7 +32,7 @@ toggle_account.addEventListener("click", function(){
     header.classList.toggle("body_blur")
     main.classList.toggle("body_blur")
     footer.classList.toggle("body_blur")
-    body.style.overflow = "scroll"
+    body.style.overflow = "hidden"
 })
 
 document.addEventListener('click', function handleClickOutsideBox(event) {
@@ -43,6 +43,7 @@ document.addEventListener('click', function handleClickOutsideBox(event) {
         header.classList.remove("body_blur")
         main.classList.remove("body_blur")
         footer.classList.remove("body_blur")
+        body.style.overflow = "auto"
     }
 });
 

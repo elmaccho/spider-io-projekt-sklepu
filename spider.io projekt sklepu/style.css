@@ -119,6 +119,8 @@ body {
   .account-main .account_box .login_form input[type=submit] {
     margin-top: 20px;
     background-color: #ff0000;
+    color: white;
+    cursor: pointer;
   }
   .account-main .account_box .login_form .form_sett {
     display: flex;
@@ -675,6 +677,8 @@ body {
   .account-main .account_box .login_form input[type=submit] {
     margin-top: 20px;
     background-color: #ff0000;
+    color: white;
+    cursor: pointer;
   }
   .account-main .account_box .login_form .form_sett {
     display: flex;
@@ -1240,6 +1244,8 @@ body {
   .account-main .account_box .login_form input[type=submit] {
     margin-top: 20px;
     background-color: #ff0000;
+    color: white;
+    cursor: pointer;
   }
   .account-main .account_box .login_form .form_sett {
     display: flex;
@@ -1343,7 +1349,7 @@ body {
     animation-duration: 1s;
   }
   .cart-main {
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     background-color: #ff0000;
     top: 15%;
