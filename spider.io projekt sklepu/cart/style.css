@@ -408,7 +408,7 @@ body {
     text-align: center;
   }
   main .cart-box .cart-product-box .item-box .quantity input::-webkit-outer-spin-button,
-main .cart-box .cart-product-box .item-box .quantity input::-webkit-inner-spin-button {
+  main .cart-box .cart-product-box .item-box .quantity input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
@@ -869,7 +869,7 @@ main .cart-box .cart-product-box .item-box .quantity input::-webkit-inner-spin-b
     text-align: center;
   }
   main .cart-box .cart-product-box .item-box .quantity input::-webkit-outer-spin-button,
-main .cart-box .cart-product-box .item-box .quantity input::-webkit-inner-spin-button {
+  main .cart-box .cart-product-box .item-box .quantity input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
@@ -1438,7 +1438,7 @@ main .cart-box .cart-product-box .item-box .quantity input::-webkit-inner-spin-b
     text-align: center;
   }
   main .cart-box .cart-product-box .item-box .quantity input::-webkit-outer-spin-button,
-main .cart-box .cart-product-box .item-box .quantity input::-webkit-inner-spin-button {
+  main .cart-box .cart-product-box .item-box .quantity input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
